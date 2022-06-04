@@ -154,21 +154,17 @@
     </div>
 </div>
     <div class="post-content">
-    <h1 id="不贅述快速開始"><a href="#不贅述快速開始" class="headerlink" title="不贅述快速開始"></a>不贅述快速開始</h1><h2 id="Github部分"><a href="#Github部分" class="headerlink" title="Github部分"></a>Github部分</h2><br>
-
-<h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>開啟<a target="_blank" rel="noopener" href="https://github.com/" title="Github">Ｇithub</a>網頁, 新建一個Repository，名稱要是:</p>
+    <h1 id="不贅述快速開始"><a href="#不贅述快速開始" class="headerlink" title="不贅述快速開始"></a>不贅述快速開始</h1><h2 id="Github部分"><a href="#Github部分" class="headerlink" title="Github部分"></a>Github部分</h2><h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>開啟<a target="_blank" rel="noopener" href="https://github.com/" title="Github">Ｇithub</a>網頁, 新建一個Repository，名稱要是:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;使用者帳號&gt;.github.io</span><br></pre></td></tr></table></figure>
-<br>
 
 <h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h3><p>建好Repository後，進入後方的<strong>Settings &#x3D;&gt; Pages</strong> 進入啟用Ｇithub Page的頁面</p>
-<p><img src="/source/images/2022-06-04.png"><br><br></p>
+<p><img src="/source/images/2022-06-04.png"></p>
 <h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h3><p>完成之後再來將這一個Repo clone到本機</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;你的Repo URL.git&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Hexo部分"><a href="#Hexo部分" class="headerlink" title="Ｈexo部分"></a>Ｈexo部分</h2><p>安裝Ｈexo之前，請先確認是否已經安裝<strong>NPM</strong>了<br><br></p>
+<h2 id="Hexo部分"><a href="#Hexo部分" class="headerlink" title="Ｈexo部分"></a>Ｈexo部分</h2><p>安裝Ｈexo之前，請先確認是否已經安裝<strong>NPM</strong>了</p>
 <h3 id="Step-1-1"><a href="#Step-1-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>安裝Ｈexo，輸入以下指令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<br>
 
 <h3 id="Step-2-1"><a href="#Step-2-1" class="headerlink" title="Step 2"></a>Step 2</h3><p>安裝完成後，使用以下指令建立一個blog</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog <span class="comment">#在目前所所在的目錄建立一個hexo資料夾</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
@@ -176,12 +172,8 @@
 <p>建立好之後，將在資料夾blog中產生好的文件<strong>複製</strong>到上一部分的github local repo資料夾中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;你的本機Repo&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
-<p>安裝好後，最基本的Hexo就完成了 ！<br><br></p>
-<h2 id="Hexo-基本介紹"><a href="#Hexo-基本介紹" class="headerlink" title="Hexo 基本介紹"></a>Hexo 基本介紹</h2><br>
-
-<h3 id="結構："><a href="#結構：" class="headerlink" title="結構："></a>結構：</h3><br>
-
-<p><img src="/source/images/2022-06-04%2012.36.12.png"></p>
+<p>安裝好後，最基本的Hexo就完成了 ！</p>
+<h2 id="Hexo-基本介紹"><a href="#Hexo-基本介紹" class="headerlink" title="Hexo 基本介紹"></a>Hexo 基本介紹</h2><h3 id="結構："><a href="#結構：" class="headerlink" title="結構："></a>結構：</h3><p><img src="/source/images/2022-06-04%2012.36.12.png"></p>
 <ul>
 <li>node_module &#x3D;&gt; 這個應該不用多做解釋了</li>
 <li>public &#x3D;&gt; 存放網站裡的內容，圖片，標籤等等</li>
@@ -189,9 +181,7 @@
 <li>themes &#x3D;&gt; 存放網站的主題</li>
 <li>_config.yml &#x3D;&gt; 設定網站內容 （檔案中官方有詳細的註解）<br></li>
 </ul>
-<h3 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h3><br>
-
-<ul>
+<h3 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h3><ul>
 <li>hexo new &#x3D;&gt; 產生新的page，category，tag， draft等等 （詳細可以參考 <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html%EF%BC%89">https://hexo.io/docs/writing.html）</a></li>
 <li>hexo clean &#x3D;&gt; 將目前資料夾中所有網頁清除</li>
 <li>hexo generate &#x3D;&gt; 依設定檔產生網頁</li>
@@ -201,9 +191,7 @@
 <p>因為我們主要是要讓hexo跟github page做整合，所以我們會需要有一個方便將內容發布上github page的功能，打開_config.yml<br>，找到下列設定，並輸入自己的值</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repo: &lt;你的Repo URL.git&gt;</span><br><span class="line">    branch: main</span><br></pre></td></tr></table></figure>
 <p>這段為設定你deploy到github的repo與branch，之後就可以透過hexo deploy發佈囉！！<br><br></p>
-<h3 id="踩坑紀錄"><a href="#踩坑紀錄" class="headerlink" title="踩坑紀錄"></a>踩坑紀錄</h3><br>
-
-<ol>
+<h3 id="踩坑紀錄"><a href="#踩坑紀錄" class="headerlink" title="踩坑紀錄"></a><font color=#FF0000>踩坑紀錄</font></h3><ol>
 <li>執行 hexo deploy 後,出現 <strong>error deployer not found:git</strong> 的錯誤<br>
 
 原因：<br><br> 沒安裝hexo-deployer-git <br>
@@ -222,9 +210,7 @@
 </ol>
 <br>
 
-<h3 id="選擇主題"><a href="#選擇主題" class="headerlink" title="選擇主題"></a>選擇主題</h3><br>
-
-<p>主題可以前往 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a> 找一個看順眼的使用，每個主題會有說明如何使用，在照步驟操作即可<br><br></p>
+<h3 id="選擇主題"><a href="#選擇主題" class="headerlink" title="選擇主題"></a>選擇主題</h3><p>主題可以前往 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a> 找一個看順眼的使用，每個主題會有說明如何使用，在照步驟操作即可<br><br></p>
 <p>我自己使用Frame</p>
 <p>以上就是如何創一個簡單部落格的說明，我想最難的還是穩定的生產內容，希望我可以做到囉</p>
 <p>謝謝觀看</p>
