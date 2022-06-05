@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Andy Chou">
+
+
+
+    <meta name="description" content="工作與生活記錄">
+
+
+
+
+
+<title>使用Remote Container建置專案開發環境 | 甲缽諾特斯</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/frame.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 6.2.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Andy Notes.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tag</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/Docker/">
+                            Docker
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/VS-Code/">
+                            VS Code
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Remote-Container/">
+                            Remote Container
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                使用Remote Container建置專案開發環境
+            
+            
+        </div>
+        <span class="post-date">
+            6月 5, 2022
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="環境檢查"><a href="#環境檢查" class="headerlink" title="環境檢查"></a>環境檢查</h1><p>安裝：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> vs code</li>
+<li><input checked="" disabled="" type="checkbox"> docker</li>
+</ul>
+<h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h2><h3 id="安裝Remte-Development"><a href="#安裝Remte-Development" class="headerlink" title="安裝Remte Development"></a>安裝Remte Development</h3><p>開啟VS Code &#x3D;&gt; 安裝Extension <strong>“Remote Development”</strong><br><br><img src="/images/2022-06-05%2015.15.25.png"></p>
+<p>Remote Development裡包含了Remote-Containers，Remote-SSH，Remote-WSL</p>
+<h2 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h2><h3 id="設定-Container"><a href="#設定-Container" class="headerlink" title="設定 Container"></a>設定 Container</h3><p>安裝完成後嘗試使用的話可以選擇<strong>Try a Development Container Sample</strong><br><img src="/images/2022-06-05%2015.21.23.png"></p>
+<p>這裡直接開始使用，首先我目前開發的專案是Angular + Dotnet Core 6 ， 因此我的開發環境會需要以下：</p>
+<ul>
+<li><input disabled="" type="checkbox"> dotnet</li>
+<li><input disabled="" type="checkbox"> node js</li>
+<li><input disabled="" type="checkbox"> npm</li>
+<li><input disabled="" type="checkbox"> angular-cli</li>
+</ul>
+<h3 id="Step-1-1"><a href="#Step-1-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>開啟你要想Remote Container的專案後，選擇<strong>Add Development Container Configuration Files</strong><br><img src="/images/%E6%88%AA%E5%9C%96%202022-06-05%2015.33.02.png"></p>
+<p>下一步選擇你要的環境，這裡我選Dotnet<br><img src="/images/%E6%88%AA%E5%9C%96%202022-06-05%2015.37.50.png"></p>
+<p>後面會問你要選擇的版本，照你的需求選即可！</p>
+<h3 id="Step-2-1"><a href="#Step-2-1" class="headerlink" title="Step 2"></a>Step 2</h3><p>選擇完成以後，會在你的專案產生一個資料夾<strong>.devcontainer</strong><br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2015.41.44.png"></p>
+<p>這裡我們看Dockerfile<br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2015.41.44.png"></p>
+<p>註解上都有詳細說明作用了，這裡因為我是使用Dotnet Core 6，因此我將版本改成6.0</p>
+<h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h3><p>確認好Dockerfile以後，我們選擇<strong>“Reopen in Container”</strong><br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2015.45.57.png"></p>
+<p>會幫我們把Project開在Container裡面，要確認可以從TERMINAL或標題確認<br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2015.50.25.png"><br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2015.51.06.png"></p>
+<p>確認好在Container後，輸入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dotnet --version</span><br><span class="line">npm -v</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+<p>如果都有回覆目前版本，代表Container內的環境設定有成功<br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2015.56.41.png"></p>
+<p>再來安裝Angular</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @angular/cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input checked="" disabled="" type="checkbox"> dotnet</li>
+<li><input checked="" disabled="" type="checkbox"> node js</li>
+<li><input checked="" disabled="" type="checkbox"> npm</li>
+<li><input checked="" disabled="" type="checkbox"> angular-cli</li>
+</ul>
+<p>完成以後，照平常專案的編譯方式，即可正常開發使用<br><img src="/../images/%E6%88%AA%E5%9C%96%202022-06-05%2016.00.41.png"></p>
+<p>透過這樣的方式建置開發環境，除了讓本機開發環境乾淨以外，如果電腦突然壞掉了也不用過於難受，Container開起來就可以繼續用不同的電腦開發了，同理如果有其他人要一起開發，也可以透過這個方式，讓對方能迅速進入開發，真棒啊～</p>
+<p>謝謝觀看</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2022/06/04/how-to-use-hexo-in-github-page/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+  </body>
+</html>
